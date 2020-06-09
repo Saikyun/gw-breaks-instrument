@@ -9,7 +9,7 @@ In a different terminal
 ```
 $ node out/gw.js
 $ node out/spec.js
-
+```
 
 Expected result is both throwing an error, because I'm erronously calling `ranged-rant`
  with `start` higher than `end`. However, this is what I get:
