@@ -9,8 +9,9 @@ shadow-cljs watch node-gw node-spec
 
 In a different terminal
 ```
-$ node out/gw.js
-$ node out/spec.js
+node out/gw.js
+Ctrl+c
+node out/spec.js
 ```
 
 Expected result is both throwing an error, because I'm erronously calling `ranged-rant`
