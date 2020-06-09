@@ -1,21 +1,17 @@
 ;; shadow-cljs configuration
-{:source-paths
- ["src"]
-
- :dependencies
- []
-
+{:source-paths ["src"]
+ 
+ :dependencies [[gnl/ghostwheel "0.3.9"]]
+ 
  :builds
- {:app {:target :browser
-        :output-dir "public/js"
-        :asset-path "/js"
-
-        :modules
-        {:main ;; <- becomes public/js/main.js
-         {:entries [starter.browser]}}
-
-        ;; start a development http server on http://localhost:8020
-        :devtools
-        {:http-root "public"
-         :http-port 8020}
-        }}}
+ {:node-gw {:target :node-script
+            :output-to "out/gw.js"
+            :main starter.ghostwheel/init
+            
+            :compiler-options {:external-config {:ghostwheel {:check true}}}}
+  
+  :node-spec {:target :node-script
+              :output-to "out/spec.js"
+              :main starter.spec/init
+              
+              :compiler-options {:external-config {:ghostwheel {:check true}}}}}}

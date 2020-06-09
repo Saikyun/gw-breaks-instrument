@@ -7,3 +7,5 @@
 /*.iml
 /.nrepl-port
 /.idea
+/out
+/.clj-kondo/.cache
