@@ -4,7 +4,7 @@
 git clone https://github.com/Saikyun/gw-breaks-instrument
 cd gw-breaks-instrument
 yarn
-shadow-cljs watch node-gw node-spec
+yarn run shadow-cljs watch node-gw node-spec
 ```
 
 In a different terminal
